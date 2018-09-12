@@ -1,0 +1,9 @@
+uuid: c94d1ac6-1234-4d19-b813-69dd09eaf9cc
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo terreno'
+vid: place_type
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,24 @@
+uuid: 988465dd-57ea-4af8-901a-6089ea657b0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: terrenos_categorias
+label: 'terrenos categorias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary:machine-name]/[term:name]'
+selection_criteria:
+  4c744d90-09cd-43e6-aaad-63d99efbc3bd:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      operacion: operacion
+      place_type: place_type
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 4c744d90-09cd-43e6-aaad-63d99efbc3bd
+selection_logic: and
+weight: -5
+relationships: {  }

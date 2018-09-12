@@ -791,5 +791,5 @@ if (file_exists($app_root . '/' . $site_path . '/settings.dev.php')) {
 if (file_exists($app_root . '/' . $site_path . '/settings.prod.php')) {
   include $app_root . '/' . $site_path . '/settings.prod.php';
 }
-$config_directories['sync'] = '../config/sync_with_available()';
+$config_directories['sync'] = '../config/sync';
 $settings['install_profile'] = 'standard';

@@ -1,0 +1,27 @@
+uuid: 00fd0ff7-bff6-4fae-8074-900cb3b9bd53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentos
+    - node.type.place
+  module:
+    - file
+id: node.place.field_documentos
+field_name: field_documentos
+entity_type: node
+bundle: place
+label: Documentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]/documents'
+  file_extensions: 'txt pdf docx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

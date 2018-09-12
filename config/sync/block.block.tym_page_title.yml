@@ -1,0 +1,20 @@
+uuid: ab381b9f-2d3e-4604-ae1c-13d74f587396
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tym
+_core:
+  default_config_hash: jyRx72mKhZRhHIW1pqJgbgVG2r9NlWwszUN5SzfcHhM
+id: tym_page_title
+theme: tym
+region: title
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

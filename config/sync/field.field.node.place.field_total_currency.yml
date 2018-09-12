@@ -1,0 +1,21 @@
+uuid: e17890fd-169d-442b-9dc8-962ac6e9918a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_currency
+    - node.type.place
+  module:
+    - options
+id: node.place.field_total_currency
+field_name: field_total_currency
+entity_type: node
+bundle: place
+label: 'Moneda Total'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 6ba786a5-81c9-47da-9f9b-0f57757ccd75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_typo_de_terreno
+field_name: field_typo_de_terreno
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

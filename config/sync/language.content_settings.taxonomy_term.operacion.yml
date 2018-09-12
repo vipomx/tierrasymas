@@ -1,0 +1,11 @@
+uuid: 54fa4b7a-b82d-44c5-9b86-9f8e3f43900a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.operacion
+id: taxonomy_term.operacion
+target_entity_type_id: taxonomy_term
+target_bundle: operacion
+default_langcode: es
+language_alterable: false

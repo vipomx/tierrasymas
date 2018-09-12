@@ -1,0 +1,29 @@
+uuid: 58a053c2-3c3f-4801-980a-9c6969a5a4bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_typo_de_terreno
+    - node.type.place
+    - taxonomy.vocabulary.place_type
+id: node.place.field_typo_de_terreno
+field_name: field_typo_de_terreno
+entity_type: node
+bundle: place
+label: 'Tipo de Terreno'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      place_type: place_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

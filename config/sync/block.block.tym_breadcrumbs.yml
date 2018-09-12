@@ -1,0 +1,22 @@
+uuid: 4f5fcaca-fd90-4092-bd93-2aec6ec9b500
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tym
+_core:
+  default_config_hash: mq_bU1mobAJEdTGtw9cW7o8aiviu65e-CM3bliCg510
+id: tym_breadcrumbs
+theme: tym
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

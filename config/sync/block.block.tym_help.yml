@@ -1,0 +1,22 @@
+uuid: efee52e6-194a-4cf4-bed7-72050bcfc14f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tym
+_core:
+  default_config_hash: 1JRJvFPm_n8cMip53GWWoQRl4cej7bybStxe_-qkmYY
+id: tym_help
+theme: tym
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

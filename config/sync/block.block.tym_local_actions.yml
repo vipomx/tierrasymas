@@ -1,0 +1,20 @@
+uuid: b89bf310-3e94-4252-9d7e-e2e6a6fd6607
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tym
+_core:
+  default_config_hash: f-V5cHBhATFOOyLWbRinOlCa10QFo5aWQ078e-wyRuI
+id: tym_local_actions
+theme: tym
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

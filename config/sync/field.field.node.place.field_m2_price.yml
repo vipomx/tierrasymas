@@ -1,0 +1,23 @@
+uuid: 017c7e5b-d14c-4fc3-9513-149e24a75ab3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_m2_price
+    - node.type.place
+id: node.place.field_m2_price
+field_name: field_m2_price
+entity_type: node
+bundle: place
+label: 'Precio por m2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: m2
+field_type: decimal

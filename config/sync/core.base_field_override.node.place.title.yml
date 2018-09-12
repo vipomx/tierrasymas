@@ -1,0 +1,18 @@
+uuid: 224ac573-85d4-4964-9ecc-5e5df2827aaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.place
+id: node.place.title
+field_name: title
+entity_type: node
+bundle: place
+label: Nombre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
