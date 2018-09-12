@@ -785,5 +785,11 @@ $settings['entity_update_batch_size'] = 50;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+if (file_exists($app_root . '/' . $site_path . '/settings.dev.php')) {
+  include $app_root . '/' . $site_path . '/settings.dev.php';
+}
+if (file_exists($app_root . '/' . $site_path . '/settings.prod.php')) {
+  include $app_root . '/' . $site_path . '/settings.prod.php';
+}
 $config_directories['sync'] = '../config/sync_with_available()';
 $settings['install_profile'] = 'standard';
