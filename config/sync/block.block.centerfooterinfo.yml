@@ -1,0 +1,25 @@
+uuid: ea482c8b-de94-4d8d-84ea-172a127d7347
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:72e8136a-da17-45d5-8596-72d95efa5ace'
+  module:
+    - block_content
+  theme:
+    - tierras
+id: centerfooterinfo
+theme: tierras
+region: footer_middle
+weight: 0
+provider: null
+plugin: 'block_content:72e8136a-da17-45d5-8596-72d95efa5ace'
+settings:
+  id: 'block_content:72e8136a-da17-45d5-8596-72d95efa5ace'
+  label: 'Center footer info'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

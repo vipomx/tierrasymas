@@ -1,0 +1,22 @@
+uuid: 76c4f9b5-aa49-4223-9078-8c95983cc7d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tierras
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: tierras_messages
+theme: tierras
+region: highlighted
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

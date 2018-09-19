@@ -1,0 +1,46 @@
+uuid: 15a150d6-2bbc-4ee4-9d28-82332abe0bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.field.contact_message.contacto.field_correo
+    - field.field.contact_message.contacto.field_mensaje
+    - field.field.contact_message.contacto.field_nombre
+id: contact_message.contacto.default
+targetEntityType: contact_message
+bundle: contacto
+mode: default
+content:
+  field_correo:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_mensaje:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_nombre:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

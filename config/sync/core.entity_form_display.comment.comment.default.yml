@@ -1,5 +1,5 @@
 uuid: 2b026c64-8bfc-479f-8fa5-8815e1ffabbd
-langcode: en
+langcode: es
 status: true
 dependencies:
   config:
@@ -17,6 +17,8 @@ content:
   author:
     weight: -2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   comment_body:
     type: text_textarea
     weight: 11

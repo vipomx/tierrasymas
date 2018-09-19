@@ -1,0 +1,25 @@
+uuid: 257dd114-69b4-403b-98f2-8c3dadccedeb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:03ba48b5-17d6-4936-8303-500ac92312fa'
+  module:
+    - block_content
+  theme:
+    - tierras
+id: leftfooterinfo
+theme: tierras
+region: footer_first
+weight: -5
+provider: null
+plugin: 'block_content:03ba48b5-17d6-4936-8303-500ac92312fa'
+settings:
+  id: 'block_content:03ba48b5-17d6-4936-8303-500ac92312fa'
+  label: 'left footer info'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

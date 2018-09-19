@@ -1,0 +1,22 @@
+uuid: e0bd0eca-4fcb-4aba-92bd-8b1edd0804ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tierras
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: tierras_breadcrumbs
+theme: tierras
+region: highlighted
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

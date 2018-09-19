@@ -1,0 +1,22 @@
+uuid: f0786872-2585-454c-997e-95401eda8cc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tierras
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: tierras_help
+theme: tierras
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

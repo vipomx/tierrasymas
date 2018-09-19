@@ -1,0 +1,18 @@
+uuid: 2d53dd50-1096-4df3-8443-0826fe86c284
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_correo
+field_name: field_correo
+entity_type: contact_message
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

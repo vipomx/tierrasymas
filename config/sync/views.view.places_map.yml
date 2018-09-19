@@ -128,7 +128,7 @@ display:
             first_row:
               enable: true
               weight: 0
-              map_center_id: location_plugins
+              map_center_id: first_row
             freeogeoip:
               weight: 0
               enable: false

@@ -1,0 +1,20 @@
+uuid: f70650f0-810d-486c-944a-b69d57868f16
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - tierras
+id: searchform
+theme: tierras
+region: header
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

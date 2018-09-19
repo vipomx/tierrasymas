@@ -1,0 +1,19 @@
+uuid: e7398580-e6a4-4873-944c-4178aa467453
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+    - field.storage.contact_message.field_correo
+id: contact_message.contacto.field_correo
+field_name: field_correo
+entity_type: contact_message
+bundle: contacto
+label: Correo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,24 @@
+// Non-modular or client styles for .l-footer region.
+.l-footer{
+  background: #673625;
+  padding: 20px 0;
+  *{
+    color: #fff;
+  }
+  #footer-first,
+  #footer-middle,
+  #footer-last{
+    padding: 15px 7%;
+  }
+  #footer-first,
+  #footer-middle{
+    border-right: solid 5px #451e0c;
+  }
+}
+
+.bottom-bar.panel{
+  background: #421c0a;
+  border: none;
+  color: #fff;
+  text-align: center;
+}

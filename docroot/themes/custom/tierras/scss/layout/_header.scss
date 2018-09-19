@@ -1,0 +1,54 @@
+// Non-modular or client styles for .l-header region.
+header.section-header{
+  background: #008044;
+  height: 76px;
+  width: 100%;
+  vertical-align: center;
+  #block-tierras-branding{
+    width: 200px;
+    padding-top: 10px;
+    display: inline-block;
+    a{
+      display: inline-block;
+      color: transparent;
+    }
+  }
+  .search-block-form{
+    width: 40%;
+    margin: 0 5%;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+    .form-item{
+      input{
+        border-radius: 5px;
+        box-shadow: none;
+        padding-right: 55px;
+      }
+    }
+    .form-actions{
+      input.form-submit{
+        position: absolute;
+        top: 3px;
+        right: 0;
+        background-color: transparent;
+        width: 50px;
+        height: 29px;
+        border-left: solid 1px #008044;
+        border-radius: 0;
+        overflow: hidden;
+        text-indent: -999px;
+        color: transparent;
+        background: url(../images/foundation/search.png) no-repeat center center;
+        background-size: 30px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  #block-tierras-main-menu{
+    width: calc(50% - 210px);
+    display: inline-block;
+  }
+}

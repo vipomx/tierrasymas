@@ -1,0 +1,17 @@
+#block-tierras-main-menu{
+  ul{
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+  ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+    margin: 0 5px 0 10px;
+    border-left: solid 1px #fff; 
+    a{
+      color: #fff;
+    }
+  }
+}
