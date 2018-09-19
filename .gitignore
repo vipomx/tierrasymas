@@ -4,9 +4,10 @@
 /docroot/core/
 /docroot/modules/contrib/
 /docroot/themes/contrib/
-/docroot/themes/custom/**/.sass-cache/
+/docroot/themes/custom/**/.sass-cache/**
 /docroot/profiles/contrib/
 /docroot/libraries/
+docroot/themes/custom/*/.sass-cache
 
 # Ignore sensitive information
 /docroot/sites/*/settings.php

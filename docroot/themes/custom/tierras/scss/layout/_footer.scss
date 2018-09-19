@@ -14,6 +14,14 @@
   #footer-middle{
     border-right: solid 5px #451e0c;
   }
+  @media (max-width: 63.9375em) {
+    #footer-first,
+    #footer-middle{
+      padding-bottom: 5px;
+      border-right: none;
+      border-bottom: solid 3px #451e0c;
+    }
+  }
 }
 
 .bottom-bar.panel{

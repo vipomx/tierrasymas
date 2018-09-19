@@ -9552,8 +9552,17 @@ header.section-header #menu-opener {
 .l-footer #footer-middle {
   border-right: solid 5px #451e0c;
 }
+@media (max-width: 63.9375em) {
+  /* line 18, ../scss/layout/_footer.scss */
+  .l-footer #footer-first,
+  .l-footer #footer-middle {
+    padding-bottom: 5px;
+    border-right: none;
+    border-bottom: solid 3px #451e0c;
+  }
+}
 
-/* line 19, ../scss/layout/_footer.scss */
+/* line 27, ../scss/layout/_footer.scss */
 .bottom-bar.panel {
   background: #421c0a;
   border: none;

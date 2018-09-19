@@ -158,7 +158,7 @@ display:
               weight: 0
               enable: false
               map_center_id: location_plugins
-          even_empty: 0
+          even_empty: 1
           icon_field: none
           marker_icon_path: ''
           marker_row_number: 0
@@ -243,13 +243,13 @@ display:
                       country: ''
                 enabled: false
               leaflet_control_fullscreen:
-                enabled: true
                 weight: 0
                 settings:
                   position: topleft
-              leaflet_gesture_handling:
-                weight: 0
                 enabled: false
+              leaflet_gesture_handling:
+                enabled: true
+                weight: 0
               leaflet_client_location_indicator:
                 weight: 0
                 enabled: false
@@ -258,7 +258,7 @@ display:
                 settings:
                   tile_layer_provider: OpenStreetMap.Mapnik
                 enabled: false
-            height: 800px
+            height: 650px
             width: 100%
             zoom: '10'
       row:
@@ -835,6 +835,9 @@ display:
       display_extenders: {  }
       path: terrenos-mapa
       display_description: ''
+      title: 'Mapa de Tierras'
+      defaults:
+        title: false
     cache_metadata:
       max-age: -1
       contexts:
