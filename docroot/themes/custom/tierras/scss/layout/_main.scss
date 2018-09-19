@@ -6,3 +6,11 @@
   margin-right: auto;
   max-width: initial;
 }
+
+.for-mobile{
+  display: none;
+  @media (max-width: 63.9375em) {
+    display: block;
+  }
+}
+

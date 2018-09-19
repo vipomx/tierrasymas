@@ -50,7 +50,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: Buscar
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -63,7 +63,7 @@ display:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
-              autosubmit: true
+              autosubmit: false
               autosubmit_exclude_textfield: false
               autosubmit_hide: true
             field_typo_de_terreno_target_id:
@@ -73,7 +73,7 @@ display:
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: '- Any -|Todos'
+                  filter_rewrite_values: "- Any -|Todos\r\n- Cualquiera -|Todos"
             field_operacion_target_id:
               bef_format: default
               more_options:
@@ -81,7 +81,32 @@ display:
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: '- Any -|Todos'
+                  filter_rewrite_values: "- Any -|Todos\r\n- Cualquiera -|Todos"
+            field_m2_price_value:
+              bef_format: default
+              slider_options:
+                bef_slider_min: !!float 0
+                bef_slider_max: !!float 500
+                bef_slider_step: !!float 1
+                bef_slider_animate: slow
+                bef_slider_orientation: horizontal
+              more_options:
+                is_secondary: false
+            field_total_price_value:
+              bef_format: default
+              slider_options:
+                bef_slider_min: !!float 0
+                bef_slider_max: !!float 100000000
+                bef_slider_step: !!float 100000
+                bef_slider_animate: slow
+                bef_slider_orientation: horizontal
+              more_options:
+                is_secondary: false
+            field_address_postal_code:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                placeholder_text: '00000'
           text_input_required_format: basic_html
       pager:
         type: mini
@@ -128,7 +153,7 @@ display:
             first_row:
               enable: true
               weight: 0
-              map_center_id: first_row
+              map_center_id: location_plugins
             freeogeoip:
               weight: 0
               enable: false
@@ -190,6 +215,13 @@ display:
                 weight: 0
                 settings:
                   position: topright
+              leaflet_control_scale:
+                weight: 0
+                settings:
+                  position: topright
+                  metric: '1'
+                  imperial: '1'
+                enabled: false
               leaflet_control_recenter:
                 weight: 0
                 settings:
@@ -226,7 +258,7 @@ display:
                 settings:
                   tile_layer_provider: OpenStreetMap.Mapnik
                 enabled: false
-            height: 500px
+            height: 800px
             width: 100%
             zoom: '10'
       row:
@@ -534,6 +566,229 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_m2_price_value:
+          id: field_m2_price_value
+          table: node__field_m2_price
+          field: field_m2_price_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_m2_price_value_op
+            label: 'Precio por m2'
+            description: ''
+            use_operator: false
+            operator: field_m2_price_value_op
+            identifier: m2_price
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: true
+          group_info:
+            label: 'Precio por m2'
+            description: ''
+            identifier: m2_price
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Menor de $20'
+                operator: '<'
+                value:
+                  value: '20'
+                  min: ''
+                  max: ''
+              2:
+                title: '$20 - $50'
+                operator: between
+                value:
+                  value: ''
+                  min: '20'
+                  max: '50'
+              3:
+                title: '$51 - $100'
+                operator: between
+                value:
+                  value: ''
+                  min: '51'
+                  max: '100'
+              4:
+                title: '$101 - $150'
+                operator: between
+                value:
+                  value: '101'
+                  min: '101'
+                  max: '150'
+              5:
+                title: '$151 - $200'
+                operator: between
+                value:
+                  value: ''
+                  min: '151'
+                  max: '200'
+              6:
+                title: 'Mayor de $200'
+                operator: '>'
+                value:
+                  value: '200'
+                  min: ''
+                  max: ''
+              7:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+          plugin_id: numeric
+        field_total_price_value:
+          id: field_total_price_value
+          table: node__field_total_price
+          field: field_total_price_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_total_price_value_op
+            label: 'Precio Total (field_total_price)'
+            description: null
+            use_operator: false
+            operator: field_total_price_value_op
+            identifier: field_total_price_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: 'Precio Total'
+            description: ''
+            identifier: total_price
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Menor a $500,000 MN'
+                operator: '<'
+                value:
+                  value: '500000'
+                  min: ''
+                  max: ''
+              2:
+                title: '$500,000 - $1,000,000 MN'
+                operator: between
+                value:
+                  value: ''
+                  min: '500000'
+                  max: '1000000'
+              3:
+                title: '$1,000,001 - $2,000,000 MN'
+                operator: between
+                value:
+                  value: ''
+                  min: '1000001'
+                  max: '2000000'
+              4:
+                title: '$2,000,001 - $3,000,000 MN'
+                operator: between
+                value:
+                  value: ''
+                  min: '2000001'
+                  max: '3000000'
+              5:
+                title: '$3,000,001 - $4,000,000 MN'
+                operator: between
+                value:
+                  value: ''
+                  min: '3000001'
+                  max: '4000000'
+              6:
+                title: '$4,000,001 - $5,000,000 MN'
+                operator: between
+                value:
+                  value: '4000'
+                  min: '4000001'
+                  max: '5000000'
+              7:
+                title: 'Mayor a $5,000,000 MN'
+                operator: '>'
+                value:
+                  value: '5000000'
+                  min: ''
+                  max: ''
+          plugin_id: numeric
+        field_address_postal_code:
+          id: field_address_postal_code
+          table: node__field_address
+          field: field_address_postal_code
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_address_postal_code_op
+            label: 'Código Postal'
+            description: ''
+            use_operator: false
+            operator: field_address_postal_code_op
+            identifier: postal_code
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
       sorts:
         created:
           id: created

@@ -5,13 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.place.body
-    - field.field.node.place.field_currency_m2
     - field.field.node.place.field_documentos
     - field.field.node.place.field_featured_image
     - field.field.node.place.field_location
     - field.field.node.place.field_m2_price
     - field.field.node.place.field_operacion
-    - field.field.node.place.field_total_currency
     - field.field.node.place.field_total_price
     - field.field.node.place.field_typo_de_terreno
     - node.type.place
@@ -37,13 +35,11 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_currency_m2: true
   field_documentos: true
   field_featured_image: true
   field_location: true
   field_m2_price: true
   field_operacion: true
-  field_total_currency: true
   field_total_price: true
   field_typo_de_terreno: true
   langcode: true

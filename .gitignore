@@ -4,6 +4,7 @@
 /docroot/core/
 /docroot/modules/contrib/
 /docroot/themes/contrib/
+/docroot/themes/custom/**/.sass-cache/
 /docroot/profiles/contrib/
 /docroot/libraries/
 

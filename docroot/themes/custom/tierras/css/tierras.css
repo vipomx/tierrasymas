@@ -9396,6 +9396,13 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+@font-face {
+  font-family: 'ionicons';
+  src: url("../fonts/ionicons/ionicons.eot?v=2.0.0");
+  src: url("../fonts/ionicons/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* line 2, ../scss/layout/_header.scss */
 header.section-header {
   background: #008044;
@@ -9452,6 +9459,59 @@ header.section-header #block-tierras-main-menu {
   width: calc(50% - 210px);
   display: inline-block;
 }
+/* line 54, ../scss/layout/_header.scss */
+header.section-header #menu-opener {
+  display: none;
+}
+@media (max-width: 63.9375em) {
+  /* line 2, ../scss/layout/_header.scss */
+  header.section-header {
+    height: 130px;
+  }
+  /* line 59, ../scss/layout/_header.scss */
+  header.section-header #block-tierras-branding {
+    width: 150px;
+  }
+  /* line 62, ../scss/layout/_header.scss */
+  header.section-header #block-tierras-main-menu {
+    display: none;
+    width: 100%;
+  }
+  /* line 65, ../scss/layout/_header.scss */
+  header.section-header #block-tierras-main-menu.open {
+    display: block;
+  }
+  /* line 69, ../scss/layout/_header.scss */
+  header.section-header .search-block-form {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: block;
+  }
+  /* line 74, ../scss/layout/_header.scss */
+  header.section-header #menu-opener {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+    background: url(../images/foundation/menu.png) no-repeat center center;
+    background-size: 100%;
+    z-index: 1001;
+    transition: all 0.3s;
+  }
+  /* line 86, ../scss/layout/_header.scss */
+  header.section-header #menu-opener.to-close {
+    background: url(../images/foundation/close-menu.png) no-repeat center center;
+    background-size: 100%;
+    position: fixed;
+  }
+  /* line 91, ../scss/layout/_header.scss */
+  header.section-header #menu-opener:focus {
+    outline: none;
+  }
+}
 
 /* line 3, ../scss/layout/_main.scss */
 .row.expanded {
@@ -9459,6 +9519,17 @@ header.section-header #block-tierras-main-menu {
   margin-left: auto;
   margin-right: auto;
   max-width: initial;
+}
+
+/* line 10, ../scss/layout/_main.scss */
+.for-mobile {
+  display: none;
+}
+@media (max-width: 63.9375em) {
+  /* line 10, ../scss/layout/_main.scss */
+  .for-mobile {
+    display: block;
+  }
 }
 
 /* line 2, ../scss/layout/_footer.scss */
@@ -9488,6 +9559,7 @@ header.section-header #block-tierras-main-menu {
   border: none;
   color: #fff;
   text-align: center;
+  margin-bottom: 0;
 }
 
 /* line 2, ../scss/modules/_menu_block.scss */
@@ -9507,4 +9579,207 @@ header.section-header #block-tierras-main-menu {
 /* line 13, ../scss/modules/_menu_block.scss */
 #block-tierras-main-menu ul li a {
   color: #fff;
+}
+@media (max-width: 63.9375em) {
+  /* line 18, ../scss/modules/_menu_block.scss */
+  #block-tierras-main-menu.open {
+    width: 100%;
+    padding: 80px 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(103, 54, 37, 0.95);
+    z-index: 1000;
+  }
+  /* line 29, ../scss/modules/_menu_block.scss */
+  #block-tierras-main-menu ul {
+    text-align: left;
+  }
+  /* line 32, ../scss/modules/_menu_block.scss */
+  #block-tierras-main-menu ul li {
+    display: block;
+    border-left: none;
+    border-bottom: solid 1px #fff;
+    font-size: 25px;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  /* line 39, ../scss/modules/_menu_block.scss */
+  #block-tierras-main-menu ul li a {
+    display: block;
+  }
+}
+
+/* line 46, ../scss/modules/_menu_block.scss */
+#block-social {
+  padding-top: 50px;
+}
+/* line 48, ../scss/modules/_menu_block.scss */
+#block-social ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 51, ../scss/modules/_menu_block.scss */
+#block-social ul li {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 15px;
+}
+/* line 55, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social {
+  min-height: 35px;
+  display: block;
+  line-height: 35px;
+}
+/* line 59, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social:hover {
+  color: #421c0a;
+}
+/* line 63, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social:before {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  font-family: 'ionicons';
+  line-height: 35px;
+  text-align: center;
+  color: #673625;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 20px;
+}
+/* line 76, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social.fb:before {
+  content: '\f231';
+}
+/* line 79, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social.tw:before {
+  content: '\f243';
+}
+/* line 82, ../scss/modules/_menu_block.scss */
+#block-social ul li a.social.ins:before {
+  content: '\f351';
+}
+
+/* line 2, ../scss/modules/_block.scss */
+.block-tierras-page-title h1 {
+  margin: 30px auto 15px auto;
+  width: 100%;
+  max-width: 1480px;
+  color: #673625;
+  padding-left: 50px;
+  font-weight: 500;
+}
+
+/* line 1, ../scss/components/map/_map.scss */
+.map-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 30px auto 80px auto;
+  width: 100%;
+  max-width: 1480px;
+  box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
+}
+/* line 7, ../scss/components/map/_map.scss */
+.map-container .filters {
+  width: 30%;
+  background: #008044;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 11, ../scss/components/map/_map.scss */
+.map-container .filters form {
+  padding: 60px;
+}
+/* line 14, ../scss/components/map/_map.scss */
+.map-container .filters label {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+/* line 19, ../scss/components/map/_map.scss */
+.map-container .filters select,
+.map-container .filters input {
+  border-radius: 15px;
+}
+/* line 22, ../scss/components/map/_map.scss */
+.map-container .filters select:focus,
+.map-container .filters input:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* line 28, ../scss/components/map/_map.scss */
+.map-container .map {
+  width: 70%;
+}
+/* line 30, ../scss/components/map/_map.scss */
+.map-container .map .leaflet-popup-content {
+  margin: 13px;
+  padding: 0 10px;
+}
+/* line 34, ../scss/components/map/_map.scss */
+.map-container .map .views-field-title {
+  margin-bottom: 10px;
+}
+@media (max-width: 63.9375em) {
+  /* line 1, ../scss/components/map/_map.scss */
+  .map-container {
+    display: block;
+    box-shadow: none;
+  }
+  /* line 41, ../scss/components/map/_map.scss */
+  .map-container .filters,
+  .map-container .map {
+    width: 100%;
+  }
+  /* line 45, ../scss/components/map/_map.scss */
+  .map-container .filters form {
+    padding: 20px;
+  }
+  /* line 48, ../scss/components/map/_map.scss */
+  .map-container .filters {
+    border-bottom: solid 3px #008044;
+    height: 0;
+    overflow: hidden;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 54, ../scss/components/map/_map.scss */
+  .map-container #map-filters {
+    color: #fff;
+    padding: 5px 50px 5px 15px;
+    background: #008044;
+    display: inline-block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+  }
+  /* line 62, ../scss/components/map/_map.scss */
+  .map-container #map-filters:after {
+    content: "\f218";
+    font-family: 'ionicons';
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  /* line 73, ../scss/components/map/_map.scss */
+  .map-container.open #map-filters:after {
+    content: "\f209";
+  }
+  /* line 76, ../scss/components/map/_map.scss */
+  .map-container.open .filters {
+    height: auto;
+  }
 }

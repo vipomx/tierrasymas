@@ -4,18 +4,19 @@ status: true
 dependencies:
   config:
     - field.field.node.place.body
-    - field.field.node.place.field_currency_m2
+    - field.field.node.place.field_address
+    - field.field.node.place.field_code
     - field.field.node.place.field_documentos
     - field.field.node.place.field_featured_image
     - field.field.node.place.field_location
     - field.field.node.place.field_m2_price
     - field.field.node.place.field_operacion
-    - field.field.node.place.field_total_currency
     - field.field.node.place.field_total_price
     - field.field.node.place.field_typo_de_terreno
     - image.style.thumbnail
     - node.type.place
   module:
+    - address
     - field_group
     - file
     - geolocation_leaflet
@@ -40,8 +41,10 @@ third_party_settings:
     group_informacion_basica_:
       children:
         - title
+        - field_code
         - body
         - field_location
+        - field_address
         - field_featured_image
         - field_documentos
       parent_name: group_data
@@ -86,7 +89,6 @@ third_party_settings:
     group_precio_por:
       children:
         - field_m2_price
-        - field_currency_m2
       parent_name: group_prices
       weight: 20
       format_type: details
@@ -99,7 +101,6 @@ third_party_settings:
     group_pre:
       children:
         - field_total_price
-        - field_total_currency
       parent_name: group_prices
       weight: 21
       format_type: details
@@ -116,28 +117,37 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_currency_m2:
-    weight: 22
-    settings: {  }
+  field_address:
+    weight: 5
+    settings:
+      default_country: null
     third_party_settings: {  }
-    type: options_select
+    type: address_default
+    region: content
+  field_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_documentos:
-    weight: 5
+    weight: 7
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_featured_image:
-    weight: 4
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -145,7 +155,7 @@ content:
     type: image_image
     region: content
   field_location:
-    weight: 3
+    weight: 4
     settings:
       centre:
         client_location:
@@ -269,12 +279,6 @@ content:
     region: content
   field_operacion:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_total_currency:
-    weight: 23
     settings: {  }
     third_party_settings: {  }
     type: options_select

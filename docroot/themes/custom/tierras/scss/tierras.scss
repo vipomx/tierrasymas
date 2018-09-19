@@ -86,7 +86,7 @@
 // Common file is where you place common utility classes to extend or
 // parametrics.
 // Optional.
-// @import "base/common";
+@import "base/common";
 
 // Drupal specific styles (to fix Drupalisms).
 @import "base/drupal";
@@ -107,6 +107,7 @@
 // @import "modules/block";
 @import "modules/button";
 @import "modules/menu_block";
+@import "modules/block";
 
 // States
 // @import "states/collapse";
@@ -116,3 +117,6 @@
 
 // Older IE support
 // @import "vendor/ie";
+
+// Components
+@import "components/map/map";

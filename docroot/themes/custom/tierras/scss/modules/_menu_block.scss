@@ -14,4 +14,74 @@
       color: #fff;
     }
   }
+  @media (max-width: 63.9375em) {
+    &.open{
+      width: 100%;
+      padding: 80px 30px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(103,54,37,0.95);
+      z-index: 1000;
+    }
+    ul{
+      text-align: left;
+    }
+    ul li{
+      display: block;
+      border-left: none;
+      border-bottom: solid 1px #fff;
+      font-size: 25px;
+      margin-bottom: 25px;
+      padding: 0;
+      a{
+        display: block;
+      }
+    }   
+  }
+}
+
+#block-social{
+  padding-top: 50px;
+  ul{
+    padding: 0;
+    margin: 0;
+    li{
+      list-style: none;
+      text-align: left;
+      margin-bottom: 15px;
+      a.social{
+        min-height: 35px;
+        display: block;
+        line-height: 35px;
+        &:hover{
+          color: #421c0a;
+        }
+      }
+      a.social:before{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        font-family: 'ionicons';
+        line-height: 35px;
+        text-align: center;
+        color: #673625;
+        background: #fff;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      a.social.fb:before{
+        content: '\f231';
+      }
+      a.social.tw:before{
+        content: '\f243';
+      }
+      a.social.ins:before{
+        content: '\f351';
+      }
+    }
+  }
 }

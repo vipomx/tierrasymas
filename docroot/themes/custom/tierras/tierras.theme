@@ -41,4 +41,8 @@ function tierras_preprocess_page(&$variables) {
 /**
  * Implements template_preprocess_views_view().
  */
-function tierras_preprocess_views_view(&$variables) {}
+function tierras_preprocess_views_view(&$variables) {
+
+}
+
+

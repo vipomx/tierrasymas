@@ -51,4 +51,46 @@ header.section-header{
     width: calc(50% - 210px);
     display: inline-block;
   }
+  #menu-opener{
+    display: none;
+  }
+  @media (max-width: 63.9375em) {
+    height: 130px;
+    #block-tierras-branding{
+      width: 150px;
+    }
+    #block-tierras-main-menu{
+      display: none;
+      width: 100%;
+      &.open{
+        display: block;
+      }
+    }
+    .search-block-form{
+      width: 100%;
+      margin: 20px 0 0 0;
+      display: block;
+    }
+    #menu-opener{
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 10px;
+      right: 5px;
+      cursor: pointer;
+      background: url(../images/foundation/menu.png) no-repeat center center;
+      background-size: 100%;
+      z-index: 1001;
+      transition: all 0.3s;
+      &.to-close{
+        background: url(../images/foundation/close-menu.png) no-repeat center center;
+        background-size: 100%;
+        position: fixed;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+  }
 }

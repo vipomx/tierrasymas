@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains tierras_admin.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function tierras_admin_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the tierras_admin module.
+    case 'help.page.tierras_admin':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manejador de recursos custom apra Tierras y mas.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function tierras_admin_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view_ids = ['places_map'];
+  $view = $form_state->getStorage('view');
+  if ($form_id == 'views_exposed_form' && in_array($view['view']->id(), $view_ids)) {
+    foreach ($form as $key => $field) {
+      if ($key == 'm2_price') {
+        $form[$key]['#options']['All'] = t('Todos');
+      }
+      elseif ($key == 'total_price') {
+        $form[$key]['#options']['All'] = t('Todos');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function tierras_admin_theme() {
+  return [
+    'tierras_admin' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -4,22 +4,22 @@ status: true
 dependencies:
   config:
     - field.field.node.place.body
-    - field.field.node.place.field_currency_m2
+    - field.field.node.place.field_address
+    - field.field.node.place.field_code
     - field.field.node.place.field_documentos
     - field.field.node.place.field_featured_image
     - field.field.node.place.field_location
     - field.field.node.place.field_m2_price
     - field.field.node.place.field_operacion
-    - field.field.node.place.field_total_currency
     - field.field.node.place.field_total_price
     - field.field.node.place.field_typo_de_terreno
     - filter.format.basic_html
     - node.type.place
   module:
+    - address
     - file
     - geolocation
     - image
-    - options
     - text
     - user
 id: node.place.default
@@ -34,12 +34,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_currency_m2:
-    weight: 107
+  field_address:
+    weight: 112
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: address_default
+    region: content
+  field_code:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_documentos:
     weight: 110
@@ -205,13 +213,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_total_currency:
-    weight: 109
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   field_total_price:
     weight: 108
