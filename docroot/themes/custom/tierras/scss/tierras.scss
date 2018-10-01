@@ -93,7 +93,7 @@
 
 // Styling for elements.
 // Optional.
-// @import "base/elements";
+@import "base/elements";
 
 // Layout
 // Each section of the document has it's own partial seperated out to improve
@@ -119,4 +119,16 @@
 // @import "vendor/ie";
 
 // Components
-@import "components/map/map";
+@import "components/locations/map";
+@import "components/locations/list";
+@import "components/carousel/carousel";
+@import "components/sharethis/sharethis";
+@import "components/hero/hero";
+
+// Paragraphs
+@import "paragraphs/paragraphs";
+
+// Content
+@import "content/place";
+@import "content/generic";
+

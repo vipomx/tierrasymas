@@ -1,0 +1,15 @@
+uuid: 84a28aa8-75c1-40ba-8c1a-b26a19009977
+langcode: en
+status: true
+dependencies: {  }
+name: place_teaser
+label: 'place teaser'
+effects:
+  fd7361a6-81a4-4e4e-a906-cbad4e60ab66:
+    uuid: fd7361a6-81a4-4e4e-a906-cbad4e60ab66
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      anchor: center-center

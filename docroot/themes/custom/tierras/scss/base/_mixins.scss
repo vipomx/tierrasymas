@@ -15,3 +15,10 @@
   -webkit-transition: $transition;
   transition:         $transition;
 }
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}

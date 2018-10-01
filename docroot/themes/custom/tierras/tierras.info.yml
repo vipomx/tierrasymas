@@ -22,6 +22,7 @@ regions:
   page_bottom: 'Page bottom'
   highlighted: Highlighted
   content: Content
+  after_content: 'After Content'
   sidebar_first: 'Left Sidebar'
   sidebar_second: 'Right Sidebar'
   footer_first: 'Footer first column'
@@ -44,3 +45,8 @@ features:
   - favicon
   - comment_user_picture
   - node_user_picture
+
+component-libraries:
+  tierras:
+    paths:
+      - scss/components 

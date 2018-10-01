@@ -164,6 +164,13 @@
           </div>
         {% endif %}
       </div>
+      <div class="l-after-content">
+        {% if page.after_content %}
+          <div id="after-content" class="after-content">
+            {{ page.after_content }}
+          </div>
+        {% endif %}
+      </div>
       {% if page.footer_first or page.footer_middle or page.footer_last %}
         <footer class="l-footer row expanded">
           {% if page.footer_first %}

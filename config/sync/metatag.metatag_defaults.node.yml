@@ -1,0 +1,19 @@
+uuid: 99816b54-deaf-481e-955e-743e9fc97c89
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  title: '[node:title] | [site:name]'
+  content_language: es
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  generator: Drupal
+  og_description: '[node:summary]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title] | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_type: summary_large_image

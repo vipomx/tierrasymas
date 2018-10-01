@@ -9403,6 +9403,30 @@ th.hide-for-touch {
   font-weight: normal;
   font-style: normal;
 }
+/* line 13, ../scss/base/_elements.scss */
+h1.node-title {
+  margin: 30px auto 15px auto;
+  width: 100%;
+  text-align: center;
+  max-width: 1480px;
+  color: #673625;
+  padding-left: 0;
+  font-weight: 500;
+}
+
+/* line 27, ../scss/base/_elements.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 31, ../scss/base/_elements.scss */
+a.active,
+a:active,
+a:hover {
+  outline: none;
+  box-shadow: none;
+}
+
 /* line 2, ../scss/layout/_header.scss */
 header.section-header {
   background: #008044;
@@ -9683,7 +9707,90 @@ header.section-header #menu-opener {
   font-weight: 500;
 }
 
-/* line 1, ../scss/components/map/_map.scss */
+/* line 12, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock {
+  padding: 130px 0;
+  background: url(../images/contact-bg.jpg) no-repeat top left;
+  background-size: cover;
+}
+@media (max-width: 40em) {
+  /* line 12, ../scss/modules/_block.scss */
+  .contact-message-contacto-form.block-contactblock {
+    padding: 80px 0;
+  }
+}
+/* line 19, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper {
+  width: 90%;
+  padding: 40px 50px;
+  max-width: 1090px;
+  margin: 0 auto;
+  background: #f1f2f2;
+  box-shadow: 4px 5px 9px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+@media (max-width: 40em) {
+  /* line 19, ../scss/modules/_block.scss */
+  .contact-message-contacto-form.block-contactblock .inner-wrapper {
+    padding: 20px;
+  }
+}
+/* line 30, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .block-title {
+  padding-bottom: 8px;
+  border-bottom: solid 3px #008044;
+  color: #008044;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* line 38, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item label {
+  display: none;
+}
+/* line 41, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-textfield, .contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-email {
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-right: 2%;
+}
+@media (max-width: 40em) {
+  /* line 41, ../scss/modules/_block.scss */
+  .contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-textfield, .contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-email {
+    width: 100%;
+    float: none;
+    margin: 0 0 15px 0;
+  }
+  /* line 51, ../scss/modules/_block.scss */
+  .contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-textfield input, .contact-message-contacto-form.block-contactblock .inner-wrapper .form-item.js-form-type-email input {
+    margin-bottom: 0;
+  }
+}
+/* line 56, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item input,
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item textarea {
+  border-radius: 15px;
+}
+/* line 59, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item input:focus,
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-item textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* line 65, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-actions {
+  text-align: right;
+}
+/* line 67, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-actions #edit-preview {
+  display: none;
+}
+/* line 70, ../scss/modules/_block.scss */
+.contact-message-contacto-form.block-contactblock .inner-wrapper .form-actions .button {
+  box-shadow: 3px 2px 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 1, ../scss/components/locations/_map.scss */
 .map-container {
   display: -webkit-box;
   display: -moz-box;
@@ -9695,7 +9802,7 @@ header.section-header #menu-opener {
   max-width: 1480px;
   box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
 }
-/* line 7, ../scss/components/map/_map.scss */
+/* line 7, ../scss/components/locations/_map.scss */
 .map-container .filters {
   width: 30%;
   background: #008044;
@@ -9704,56 +9811,56 @@ header.section-header #menu-opener {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 11, ../scss/components/map/_map.scss */
+/* line 11, ../scss/components/locations/_map.scss */
 .map-container .filters form {
   padding: 60px;
 }
-/* line 14, ../scss/components/map/_map.scss */
+/* line 14, ../scss/components/locations/_map.scss */
 .map-container .filters label {
   color: #fff;
   font-size: 18px;
   margin-bottom: 3px;
 }
-/* line 19, ../scss/components/map/_map.scss */
+/* line 19, ../scss/components/locations/_map.scss */
 .map-container .filters select,
 .map-container .filters input {
   border-radius: 15px;
 }
-/* line 22, ../scss/components/map/_map.scss */
+/* line 22, ../scss/components/locations/_map.scss */
 .map-container .filters select:focus,
 .map-container .filters input:focus {
   outline: none;
   box-shadow: none;
 }
-/* line 28, ../scss/components/map/_map.scss */
+/* line 28, ../scss/components/locations/_map.scss */
 .map-container .map {
   width: 70%;
 }
-/* line 30, ../scss/components/map/_map.scss */
+/* line 30, ../scss/components/locations/_map.scss */
 .map-container .map .leaflet-popup-content {
   margin: 13px;
   padding: 0 10px;
 }
-/* line 34, ../scss/components/map/_map.scss */
+/* line 34, ../scss/components/locations/_map.scss */
 .map-container .map .views-field-title {
   margin-bottom: 10px;
 }
 @media (max-width: 63.9375em) {
-  /* line 1, ../scss/components/map/_map.scss */
+  /* line 1, ../scss/components/locations/_map.scss */
   .map-container {
     display: block;
     box-shadow: none;
   }
-  /* line 41, ../scss/components/map/_map.scss */
+  /* line 41, ../scss/components/locations/_map.scss */
   .map-container .filters,
   .map-container .map {
     width: 100%;
   }
-  /* line 45, ../scss/components/map/_map.scss */
+  /* line 45, ../scss/components/locations/_map.scss */
   .map-container .filters form {
     padding: 20px;
   }
-  /* line 48, ../scss/components/map/_map.scss */
+  /* line 48, ../scss/components/locations/_map.scss */
   .map-container .filters {
     border-bottom: solid 3px #008044;
     height: 0;
@@ -9763,7 +9870,7 @@ header.section-header #menu-opener {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  /* line 54, ../scss/components/map/_map.scss */
+  /* line 54, ../scss/components/locations/_map.scss */
   .map-container #map-filters {
     color: #fff;
     padding: 5px 50px 5px 15px;
@@ -9773,7 +9880,7 @@ header.section-header #menu-opener {
     border-top-left-radius: 10px;
     position: relative;
   }
-  /* line 62, ../scss/components/map/_map.scss */
+  /* line 62, ../scss/components/locations/_map.scss */
   .map-container #map-filters:after {
     content: "\f218";
     font-family: 'ionicons';
@@ -9783,12 +9890,604 @@ header.section-header #menu-opener {
     right: 15px;
     top: 5px;
   }
-  /* line 73, ../scss/components/map/_map.scss */
+  /* line 73, ../scss/components/locations/_map.scss */
   .map-container.open #map-filters:after {
     content: "\f209";
   }
-  /* line 76, ../scss/components/map/_map.scss */
+  /* line 76, ../scss/components/locations/_map.scss */
   .map-container.open .filters {
     height: auto;
   }
+}
+
+/* line 1, ../scss/components/locations/_list.scss */
+.list-container {
+  margin: 30px auto 80px auto;
+  width: 100%;
+}
+/* line 4, ../scss/components/locations/_list.scss */
+.list-container .filters {
+  width: 100%;
+  background: #008044;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 8, ../scss/components/locations/_list.scss */
+.list-container .filters form {
+  padding: 60px;
+}
+/* line 11, ../scss/components/locations/_list.scss */
+.list-container .filters .form-item,
+.list-container .filters .form-actions {
+  display: inline-block;
+  width: 30%;
+  margin: 10px 20px;
+}
+/* line 18, ../scss/components/locations/_list.scss */
+.list-container .filters .form-actions .form-submit {
+  width: 100%;
+}
+/* line 22, ../scss/components/locations/_list.scss */
+.list-container .filters label {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+/* line 27, ../scss/components/locations/_list.scss */
+.list-container .filters select,
+.list-container .filters input {
+  border-radius: 15px;
+}
+/* line 30, ../scss/components/locations/_list.scss */
+.list-container .filters select:focus,
+.list-container .filters input:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* line 36, ../scss/components/locations/_list.scss */
+.list-container .list {
+  width: 100%;
+  margin: 30px auto;
+  max-width: 1380px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 63.9375em) {
+  /* line 44, ../scss/components/locations/_list.scss */
+  .list-container .filters form {
+    padding: 20px;
+  }
+  /* line 47, ../scss/components/locations/_list.scss */
+  .list-container .filters {
+    border-bottom: solid 3px #008044;
+    height: 0;
+    overflow: hidden;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 52, ../scss/components/locations/_list.scss */
+  .list-container .filters .form-item,
+  .list-container .filters .form-actions {
+    width: 49%;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  /* line 59, ../scss/components/locations/_list.scss */
+  .list-container #list-filters {
+    color: #fff;
+    padding: 5px 50px 5px 15px;
+    background: #008044;
+    display: inline-block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+  }
+  /* line 67, ../scss/components/locations/_list.scss */
+  .list-container #list-filters:after {
+    content: "\f218";
+    font-family: 'ionicons';
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  /* line 78, ../scss/components/locations/_list.scss */
+  .list-container.open #list-filters:after {
+    content: "\f209";
+  }
+  /* line 81, ../scss/components/locations/_list.scss */
+  .list-container.open .filters {
+    height: auto;
+  }
+}
+@media (max-width: 40em) {
+  /* line 88, ../scss/components/locations/_list.scss */
+  .list-container .filters .form-item,
+  .list-container .filters .form-actions {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+  }
+}
+/* line 96, ../scss/components/locations/_list.scss */
+.list-container .views-row {
+  width: 33%;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+}
+@media (max-width: 1050px) {
+  /* line 96, ../scss/components/locations/_list.scss */
+  .list-container .views-row {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  /* line 96, ../scss/components/locations/_list.scss */
+  .list-container .views-row {
+    width: 100%;
+    border-bottom: solid 2px #f3f3f3;
+  }
+}
+/* line 109, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .image {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/* line 112, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .image a {
+  display: block;
+}
+/* line 114, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .image a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* line 120, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .place-title {
+  padding: 30px 10px 10px 0px;
+  border-bottom: solid 2px #008044;
+  margin-bottom: 20px;
+}
+/* line 125, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .place-title h2.node-title {
+  font-weight: bold;
+  color: #58595b;
+  font-size: 1.6875rem;
+  text-align: center;
+}
+/* line 130, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .place-title h2.node-title a {
+  color: #58595b;
+}
+/* line 134, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .content {
+  text-align: justify;
+}
+/* line 137, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .read-more {
+  text-align: center;
+}
+/* line 139, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .read-more .button {
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* line 1, ../scss/components/carousel/_carousel.scss */
+.carousel {
+  position: relative;
+  padding: 30px 50px;
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
+  background: #008044;
+}
+/* line 6, ../scss/components/carousel/_carousel.scss */
+.carousel .item {
+  width: 100%;
+}
+/* line 8, ../scss/components/carousel/_carousel.scss */
+.carousel .item img {
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 14, ../scss/components/carousel/_carousel.scss */
+.carousel .controls {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+/* line 21, ../scss/components/carousel/_carousel.scss */
+.carousel #next {
+  float: right;
+  cursor: pointer;
+  height: 60px;
+  width: 40px;
+  position: relative;
+  overflow: hidden;
+  text-indent: -999px;
+  color: transparent;
+}
+/* line 30, ../scss/components/carousel/_carousel.scss */
+.carousel #next:after {
+  content: '\f363';
+  font-family: 'ionicons';
+  text-indent: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 60px;
+  line-height: 60px;
+}
+/* line 46, ../scss/components/carousel/_carousel.scss */
+.carousel #prev {
+  float: left;
+  cursor: pointer;
+  height: 60px;
+  width: 40px;
+  position: relative;
+  overflow: hidden;
+  text-indent: -999px;
+  color: transparent;
+}
+/* line 55, ../scss/components/carousel/_carousel.scss */
+.carousel #prev:after {
+  content: '\f361';
+  font-family: 'ionicons';
+  text-indent: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+/* line 2, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social {
+  margin: 15px 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 6, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+/* line 10, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share a {
+  display: block;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  text-indent: -999px;
+  color: transparent;
+  position: relative;
+  background: #673625;
+  border-radius: 50%;
+}
+/* line 20, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share a:after {
+  content: '\f231';
+  font-family: 'ionicons';
+  color: #fff;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+}
+/* line 36, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share.tw a:after {
+  content: '\f243';
+  font-size: 25px;
+}
+/* line 40, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share.mail a:after {
+  content: '\f132';
+  font-size: 25px;
+}
+/* line 44, ../scss/components/sharethis/_sharethis.scss */
+.sharethis-widget ul.social li.share.whats a:after {
+  content: '\f4f0';
+  font-size: 25px;
+}
+
+/* line 1, ../scss/components/hero/_hero.scss */
+.hero {
+  position: relative;
+}
+/* line 4, ../scss/components/hero/_hero.scss */
+.hero .image-wrapper .image img {
+  width: 100%;
+  height: auto;
+}
+/* line 8, ../scss/components/hero/_hero.scss */
+.hero .image-wrapper .owl-dots {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* line 17, ../scss/components/hero/_hero.scss */
+.hero .image-wrapper .owl-dots .owl-dot {
+  width: 15px;
+  height: 15px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  border: solid 1px #b5b6b7;
+}
+/* line 25, ../scss/components/hero/_hero.scss */
+.hero .image-wrapper .owl-dots .owl-dot:active, .hero .image-wrapper .owl-dots .owl-dot:focus, .hero .image-wrapper .owl-dots .owl-dot:hover {
+  outline: none;
+}
+/* line 30, ../scss/components/hero/_hero.scss */
+.hero .image-wrapper .owl-dots .owl-dot.active {
+  background: #673625;
+}
+/* line 36, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3;
+  padding: 20px 0;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 50%, white 70%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 30%, white 50%, white 70%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 30%, white 50%, white 70%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+/* line 48, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper img {
+  display: block;
+  width: 50%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 55, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper .content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+  color: #008044;
+}
+/* line 60, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper .content-wrapper .content * {
+  font-size: 1.3rem;
+  color: #58595b;
+}
+/* line 64, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper .content-wrapper h2.title {
+  font-size: 2.5rem;
+  color: #008044;
+}
+/* line 69, ../scss/components/hero/_hero.scss */
+.hero .inner-wrapper .content-wrapper .cta a {
+  padding: 10px 15px;
+  background: #008044;
+  color: #fff;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1.3rem;
+}
+
+/* line 3, ../scss/paragraphs/_paragraphs.scss */
+.text-block .inner-wrapper,
+.video-block .inner-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 15px;
+}
+/* line 8, ../scss/paragraphs/_paragraphs.scss */
+.text-block .inner-wrapper img,
+.video-block .inner-wrapper img {
+  width: 100%;
+  height: auto;
+}
+/* line 12, ../scss/paragraphs/_paragraphs.scss */
+.text-block .inner-wrapper h2.title,
+.video-block .inner-wrapper h2.title {
+  color: #673625;
+  font-weight: bold;
+}
+/* line 16, ../scss/paragraphs/_paragraphs.scss */
+.text-block .inner-wrapper .body *,
+.video-block .inner-wrapper .body * {
+  color: #58595b;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+/* line 23, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel {
+  padding: 50px 90px;
+  background: #008044;
+}
+/* line 26, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .inner-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* line 32, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .image {
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 37, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .place-title h2.node-title {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: solid 1px #1d6636;
+}
+/* line 43, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .place-title h2.node-title a {
+  color: #fff;
+}
+/* line 48, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .content * {
+  color: #fff;
+}
+/* line 52, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .read-more a {
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #008044;
+}
+/* line 59, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  right: -100px;
+  z-index: 3;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (max-width: 700px) {
+  /* line 59, ../scss/paragraphs/_paragraphs.scss */
+  .paragraph--type--places-carousel .owl-nav {
+    left: -70px;
+    right: -70px;
+  }
+}
+/* line 70, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button {
+  width: 50px;
+  height: 70px;
+  margin: 0;
+  position: relative;
+}
+/* line 75, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button span {
+  display: none;
+}
+/* line 78, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button:after {
+  content: '\f363';
+  font-family: 'ionicons';
+  text-indent: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 60px;
+  line-height: 60px;
+}
+/* line 93, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button.owl-prev {
+  float: left;
+}
+/* line 96, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button.owl-next {
+  float: right;
+}
+/* line 99, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button.owl-prev:after {
+  content: '\f361';
+}
+/* line 102, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .owl-nav button:focus, .paragraph--type--places-carousel .owl-nav button:hover, .paragraph--type--places-carousel .owl-nav button:active {
+  outline: none;
+}
+
+/* line 2, ../scss/content/_place.scss */
+.place-full .extra-info {
+  margin-top: 50px;
+}
+/* line 5, ../scss/content/_place.scss */
+.place-full .place-info,
+.place-full .place-info p {
+  color: #58595b;
+  font-weight: normal;
+  font-size: 20px;
+}
+/* line 13, ../scss/content/_place.scss */
+.place-full .place-info .field.field-label-inline {
+  margin-bottom: 15px;
+}
+/* line 15, ../scss/content/_place.scss */
+.place-full .place-info .field.field-label-inline .field-label {
+  display: inline;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* line 20, ../scss/content/_place.scss */
+.place-full .place-info .field.field-label-inline .field-items {
+  display: inline-block;
+}
+/* line 25, ../scss/content/_place.scss */
+.place-full .place-info .place-description {
+  margin-top: 30px;
+  border-top: solid 5px #451e0c;
+  padding-top: 20px;
+}
+/* line 31, ../scss/content/_place.scss */
+.place-full .place-info .docs .file a {
+  color: #451e0c;
+}
+/* line 33, ../scss/content/_place.scss */
+.place-full .place-info .docs .file a:hover {
+  color: #008044;
+}
+/* line 36, ../scss/content/_place.scss */
+.place-full .place-info .docs .file a:before {
+  content: '\f12f';
+  font-family: 'ionicons';
+  color: #451e0c;
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+/* line 48, ../scss/content/_place.scss */
+.node--type-place div.content {
+  border-bottom: solid 5px #008044;
 }

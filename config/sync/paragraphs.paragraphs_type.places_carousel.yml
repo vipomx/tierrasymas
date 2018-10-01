@@ -1,0 +1,9 @@
+uuid: 75da920e-b004-42c0-93f9-ca77fd9d3f9e
+langcode: en
+status: true
+dependencies: {  }
+id: places_carousel
+label: 'Carousel de terrenos'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

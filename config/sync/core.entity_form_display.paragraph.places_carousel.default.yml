@@ -1,0 +1,41 @@
+uuid: 7e6202f9-a8e0-4bbd-800b-3f2155f6a379
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.places_carousel.field_place
+    - paragraphs.paragraphs_type.places_carousel
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_tierras:
+      children:
+        - field_place
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Tierras
+id: paragraph.places_carousel.default
+targetEntityType: paragraph
+bundle: places_carousel
+mode: default
+content:
+  field_place:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

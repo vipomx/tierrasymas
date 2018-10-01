@@ -1,0 +1,50 @@
+.sharethis-widget{
+  ul.social{
+    margin: 15px 0;
+    padding: 0;
+    text-align: center;
+    li.share{
+      list-style: none;
+      display: inline-block;
+      margin: 0 10px;
+      a{
+        display: block;
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        text-indent: -999px;
+        color: transparent;
+        position: relative;
+        background: #673625;
+        border-radius: 50%;
+        &:after{
+          content:'\f231';
+          font-family: 'ionicons';
+          color: #fff;
+          text-indent: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 2;
+          font-size: 30px;
+          text-align: center;
+          line-height: 50px;
+        }
+      }
+      &.tw a:after{
+        content: '\f243';
+        font-size: 25px;
+      }
+      &.mail a:after{
+        content: '\f132';
+        font-size: 25px;
+      }
+      &.whats a:after{
+        content: '\f4f0';
+        font-size: 25px;
+      }
+    }
+  }
+}

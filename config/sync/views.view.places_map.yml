@@ -17,6 +17,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_infinite_scroll
 id: places_map
 label: 'Terrenos Mapa'
 module: views
@@ -135,11 +136,15 @@ display:
           centre:
             client_location:
               enable: true
-              weight: 0
+              weight: -10
               map_center_id: client_location
+            first_row:
+              enable: true
+              weight: -9
+              map_center_id: location_plugins
             fit_bounds:
               enable: true
-              weight: 0
+              weight: -8
               map_center_id: fit_bounds
               settings:
                 reset_zoom: false
@@ -148,14 +153,10 @@ display:
               settings:
                 latitude: null
                 longitude: null
-              weight: 0
-              map_center_id: location_plugins
-            first_row:
-              enable: true
-              weight: 0
+              weight: -7
               map_center_id: location_plugins
             freeogeoip:
-              weight: 0
+              weight: -6
               enable: false
               map_center_id: location_plugins
           even_empty: 1
@@ -876,17 +877,15 @@ display:
           relationship: none
           view_mode: teaser
       pager:
-        type: full
+        type: infinite_scroll
         options:
-          items_per_page: 20
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
           tags:
             previous: ‹‹
             next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -895,7 +894,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          views_infinite_scroll:
+            button_text: 'Ver más'
+            automatically_load_content: false
     cache_metadata:
       max-age: -1
       contexts:

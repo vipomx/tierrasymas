@@ -1,0 +1,21 @@
+uuid: a8279718-4c4e-47d2-ab25-207fdefcfb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: hero
+label: Contenido
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

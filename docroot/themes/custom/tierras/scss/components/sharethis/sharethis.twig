@@ -1,0 +1,20 @@
+<div class="sharethis-widget">
+  {% if site_url %}
+    <div class="inner-wrapper">
+      <ul class="social">
+        <li class="share fb">
+          <a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' ~ site_url }}" target="_blank">{{ 'Compartir en Facebook'|t }}</a>  
+        </li>
+        <li class="share tw">
+          <a href="{{ 'https://twitter.com/home?status=' ~ site_url }}" target="_blank">{{ 'Compartir en Twitter'|t }}</a>
+        </li>
+        <li class="share mail">
+          <a href="{{ 'mailto:?&body=' ~ site_url }}" target="_blank">{{ 'Compartir en Mail'|t }}</a>
+        </li>
+        <li class="share whats">
+          <a href="{{ 'https://api.whatsapp.com/send?text=' ~ site_url }}" target="_blank">{{ 'Compartir en Whatsapp'|t }}</a>
+        </li>
+      </ul>
+    </div>
+  {% endif %}
+</div>

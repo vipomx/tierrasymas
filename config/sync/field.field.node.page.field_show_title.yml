@@ -1,0 +1,23 @@
+uuid: 00f89364-c580-4e2d-9cc4-cf70837dc5a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_title
+    - node.type.page
+id: node.page.field_show_title
+field_name: field_show_title
+entity_type: node
+bundle: page
+label: 'Mostrar Titulo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

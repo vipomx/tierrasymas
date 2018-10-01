@@ -26,10 +26,14 @@
     });
   }
 
-  // Manages map filters.
+  // Manages filters.
   function mapFilters() {
-    if ($('#map-filters').length > 0) {
+    if ($('#map-filters').length > 0 || $('#list-filters').length > 0) {
       $('#map-filters').click(function(event) {
+        event.preventDefault();
+        $(this).parent().toggleClass('open');
+      });
+      $('#list-filters').click(function(event) {
         event.preventDefault();
         $(this).parent().toggleClass('open');
       });

@@ -1,0 +1,32 @@
+uuid: ab5a9912-2242-402f-81df-f7b8ccdb8c4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contacto
+  module:
+    - contact_block
+    - ctools
+  theme:
+    - tierras
+id: contactblock
+theme: tierras
+region: after_content
+weight: -6
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: Contactanos
+  provider: contact_block
+  label_display: visible
+  contact_form: contacto
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+      place: place
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

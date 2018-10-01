@@ -1,0 +1,9 @@
+uuid: 9c7bbe4a-5dcb-4e93-a50c-16abe930edb5
+langcode: en
+status: true
+dependencies: {  }
+id: text_block
+label: 'Text block'
+icon_uuid: null
+description: 'Bloque de texto'
+behavior_plugins: {  }

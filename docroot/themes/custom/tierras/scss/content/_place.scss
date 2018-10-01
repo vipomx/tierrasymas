@@ -1,0 +1,50 @@
+.place-full{
+  .extra-info{
+    margin-top: 50px;
+  }
+  .place-info,
+  .place-info p{
+    color: #58595b;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .place-info{
+    .field{
+      &.field-label-inline{
+        margin-bottom: 15px;
+        .field-label{
+          display: inline;
+          margin-right: 10px;
+          font-weight: bold;
+        }
+        .field-items{
+          display: inline-block;
+        }
+      }
+    }
+    .place-description{
+      margin-top: 30px;
+      border-top: solid 5px #451e0c;
+      padding-top: 20px;
+    }
+    .docs{
+      .file a{
+        color: #451e0c;
+        &:hover{
+          color: #008044;
+        }
+        &:before{
+          content:'\f12f';
+          font-family: 'ionicons';
+          color: #451e0c;
+          margin-right: 10px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.node--type-place div.content{
+  border-bottom: solid 5px #008044;
+}

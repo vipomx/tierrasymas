@@ -1,0 +1,146 @@
+.list-container{
+  margin: 30px auto 80px auto;
+  width: 100%;
+  .filters{
+    width: 100%;
+    background: #008044;
+    @include transition(all 0.3s);
+    form{
+      padding: 60px;
+    }
+    .form-item,
+    .form-actions{
+      display: inline-block;
+      width: 30%;
+      margin: 10px 20px;
+    }
+    .form-actions{
+      .form-submit{
+        width: 100%;
+      }
+    }
+    label{
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+    select,
+    input{
+      border-radius: 15px;
+      &:focus{
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .list{
+    width: 100%;
+    margin: 30px auto;
+    max-width: 1380px;
+    @include flexbox();
+    flex-wrap: wrap;
+  }
+  @media (max-width: 63.9375em) {
+    .filters form{
+      padding: 20px;
+    }
+    .filters{
+      border-bottom: solid 3px #008044;
+      height: 0;
+      overflow: hidden;
+      @include transition(all 0.3s);
+      .form-item,
+      .form-actions{
+        width: 49%;
+        margin: 0;
+        padding: 10px 20px;
+      }
+    }
+    #list-filters{
+      color: #fff;
+      padding: 5px 50px 5px 15px;
+      background: #008044;
+      display: inline-block;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      position: relative;
+      &:after{
+        content: "\f218";
+        font-family: 'ionicons';
+        display: inline;
+        margin-left: 10px;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+      }
+    }
+    &.open{
+      #list-filters:after{
+        content: "\f209";
+      }
+      .filters{
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 40em) {
+    .filters{
+      .form-item,
+      .form-actions{
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .views-row{
+    width: 33%;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    @media (max-width: 1050px) {
+      width: 50%;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+      border-bottom: solid 2px #f3f3f3;
+    }
+  }
+  .views-row .place-teaser{
+    .image{
+      box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    .image a{
+      display: block;
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .place-title{
+      padding: 30px 10px 10px 0px;
+      border-bottom: solid 2px #008044;
+      margin-bottom: 20px;
+    }
+    .place-title h2.node-title{
+      font-weight: bold;
+      color: #58595b;
+      font-size: 1.6875rem;
+      text-align: center;
+      a{
+        color: #58595b;
+      }
+    }
+    .content{
+      text-align: justify;
+    }
+    .read-more{
+      text-align: center;
+      .button{
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+

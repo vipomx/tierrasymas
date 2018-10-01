@@ -12,71 +12,35 @@ targetEntityType: contact_message
 bundle: contacto
 mode: default
 content:
-  copy:
-    weight: 50
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_correo:
-    weight: 52
+    weight: 1
     settings:
       size: 60
-      placeholder: ''
+      placeholder: Correo
     third_party_settings: {  }
     type: email_default
     region: content
   field_mensaje:
-    weight: 53
+    weight: 2
     settings:
       rows: 5
-      placeholder: ''
+      placeholder: Mensaje...
     third_party_settings: {  }
     type: string_textarea
     region: content
   field_nombre:
-    weight: 51
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-  mail:
-    weight: -40
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  message:
-    type: string_textarea
     weight: 0
     settings:
-      rows: 12
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-  name:
-    weight: -50
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  preview:
-    weight: 40
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  subject:
-    type: string_textfield
-    weight: -10
-    region: content
-    settings:
       size: 60
-      placeholder: ''
+      placeholder: Nombre
     third_party_settings: {  }
-hidden: {  }
+    type: string_textfield
+    region: content
+hidden:
+  copy: true
+  langcode: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

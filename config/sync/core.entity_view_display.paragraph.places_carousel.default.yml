@@ -1,0 +1,22 @@
+uuid: 0552eb6f-5e71-421d-9a72-dd790b4a4af4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.places_carousel.field_place
+    - paragraphs.paragraphs_type.places_carousel
+id: paragraph.places_carousel.default
+targetEntityType: paragraph
+bundle: places_carousel
+mode: default
+content:
+  field_place:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

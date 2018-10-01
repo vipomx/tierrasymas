@@ -2,6 +2,8 @@ uuid: 1156f03e-47bf-4f82-a062-e8c627e56740
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
   theme:
     - tierras
 _core:
@@ -9,7 +11,7 @@ _core:
 id: tierras_page_title
 theme: tierras
 region: content
-weight: -50
+weight: -7
 provider: null
 plugin: page_title_block
 settings:
@@ -17,4 +19,12 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+      place: place
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

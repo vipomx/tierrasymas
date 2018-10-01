@@ -1,0 +1,18 @@
+uuid: 1647515c-cd9f-4226-a927-b2f2ca0c7009
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  keywords: 'terrenos,renta,venta,casa,departamento'
+  shortlink: '[site:url]'
+  title: 'Tierras y Mas'
+  canonical_url: '[site:url]'
+  apple_mobile_web_app_status_bar_style: black-translucent
+  theme_color: '#008044'
+  apple_mobile_web_app_capable: 'yes'
+  mobileoptimized: width
+  og_site_name: 'Tierras y Mas'

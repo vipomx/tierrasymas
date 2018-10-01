@@ -1,0 +1,9 @@
+uuid: d3171713-ad3e-41aa-a203-9e420bdb462c
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Cabecera
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

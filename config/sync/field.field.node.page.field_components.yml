@@ -1,0 +1,44 @@
+uuid: 2bcde4ee-6266-4542-8dfc-5950593dc325
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.page
+    - paragraphs.paragraphs_type.places_carousel
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.page.field_components
+field_name: field_components
+entity_type: node
+bundle: page
+label: Componentes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text_block: text_block
+      video: video
+      places_carousel: places_carousel
+    target_bundles_drag_drop:
+      text_block:
+        enabled: true
+        weight: 2
+      hero:
+        weight: 3
+        enabled: false
+      video:
+        enabled: true
+        weight: 4
+      places_carousel:
+        enabled: true
+        weight: 5
+field_type: entity_reference_revisions

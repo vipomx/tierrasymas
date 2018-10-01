@@ -1,0 +1,43 @@
+<div class="hero {% if images|length > 1 %}h-carousel{% endif %}">
+  <div class="image-wrapper">
+    {% if images|length > 1 %}
+      <div class="images owl-carousel">
+        {% for image in images %}
+          <div class="image">
+            {{ image }}
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="image">
+        {{ images }}
+      </div>
+    {% endif %}
+  </div>
+  {% if (title or content or cta) %}
+    <div class="inner-wrapper">
+      <div class="content-wrapper">
+        {% if title %}
+          <h2 class="title">
+            {{ title }}
+          </h2>
+        {% endif %}
+        {% if content %}
+          <div class="content">
+            {{ content }}
+          </div>
+        {% endif %}
+        {% if cta %}
+          <div class="cta">
+            {{ cta }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="inner-wrapper">
+      <img src="/themes/custom/tierras/images/logo-color.png" alt="Logo Tierras y Mas">
+    </div>
+  {% endif %}
+</div>
+{{ attach_library('tierras/hero') }}

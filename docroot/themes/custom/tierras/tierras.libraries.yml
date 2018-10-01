@@ -9,3 +9,40 @@ global:
     - core/drupal
     - core/jquery
     - core/modernizr
+
+carousel:
+  js:
+    js/carousel.js: {}
+    js/jquery.cycle2.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+owl:
+  css:
+    base:
+      css/owl.carousel.min.css: {}
+  js:
+    js/owl.carousel.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+
+hero:
+  js:
+    js/hero.js: {}
+  dependencies:
+    - tierras/owl
+
+
+places-carousel:
+  js:
+    js/places-carousel.js: {}
+  dependencies:
+    - tierras/owl
+
+
+
+
+
+

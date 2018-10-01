@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.place.field_code
     - field.field.node.place.field_documentos
     - field.field.node.place.field_featured_image
+    - field.field.node.place.field_gallery
     - field.field.node.place.field_location
     - field.field.node.place.field_m2_price
     - field.field.node.place.field_operacion
     - field.field.node.place.field_total_price
     - field.field.node.place.field_typo_de_terreno
+    - field.field.node.place.field_video
     - image.style.thumbnail
     - node.type.place
   module:
@@ -22,6 +24,7 @@ dependencies:
     - geolocation_leaflet
     - image
     - text
+    - video_embed_field
 third_party_settings:
   field_group:
     group_data:
@@ -29,6 +32,7 @@ third_party_settings:
         - group_informacion_basica_
         - group_configuracion
         - group_prices
+        - group_multimedia
       parent_name: ''
       weight: 0
       format_type: tabs
@@ -90,7 +94,7 @@ third_party_settings:
       children:
         - field_m2_price
       parent_name: group_prices
-      weight: 20
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -102,7 +106,7 @@ third_party_settings:
       children:
         - field_total_price
       parent_name: group_prices
-      weight: 21
+      weight: 7
       format_type: details
       format_settings:
         id: ''
@@ -110,6 +114,20 @@ third_party_settings:
         open: false
         required_fields: false
       label: 'Precio Total'
+    group_multimedia:
+      children:
+        - field_gallery
+        - field_video
+      parent_name: group_data
+      weight: 23
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: Multimedia
 id: node.place.default
 targetEntityType: node
 bundle: place
@@ -125,7 +143,7 @@ content:
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 5
+    weight: 6
     settings:
       default_country: null
     third_party_settings: {  }
@@ -140,14 +158,22 @@ content:
     type: string_textfield
     region: content
   field_documentos:
-    weight: 7
+    weight: 8
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_featured_image:
-    weight: 6
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_gallery:
+    weight: 26
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -295,6 +321,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_video:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
     region: content
   title:
     type: string_textfield
