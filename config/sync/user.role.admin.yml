@@ -1,0 +1,46 @@
+uuid: 647e8855-fe25-43b8-ad22-2f3824944754
+langcode: en
+status: true
+dependencies: {  }
+id: admin
+label: Admin
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer contact forms'
+  - 'administer menu'
+  - 'administer url aliases'
+  - 'create content translations'
+  - 'create page content'
+  - 'create place content'
+  - 'create terms in operacion'
+  - 'create terms in place_type'
+  - 'create url aliases'
+  - 'delete content translations'
+  - 'delete terms in operacion'
+  - 'delete terms in place_type'
+  - 'delete terms in tags'
+  - 'edit any page content'
+  - 'edit any place content'
+  - 'edit own page content'
+  - 'edit own place content'
+  - 'edit terms in operacion'
+  - 'edit terms in place_type'
+  - 'revert page revisions'
+  - 'revert place revisions'
+  - 'translate any entity'
+  - 'translate configuration'
+  - 'update content translations'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view place revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
