@@ -1,4 +1,3 @@
-uuid: 6b379dc3-a0b9-40c9-9b86-bf110f8c54ea
 langcode: en
 status: true
 dependencies: {  }
@@ -6,7 +5,6 @@ name: hero
 label: Hero
 effects:
   ce40e2fe-b3da-410b-a350-365251784c45:
-    uuid: ce40e2fe-b3da-410b-a350-365251784c45
     id: image_scale_and_crop
     weight: 1
     data:

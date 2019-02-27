@@ -1,4 +1,3 @@
-uuid: 8da09dcb-3099-4330-a241-f259b4336225
 langcode: es
 status: true
 dependencies: {  }
@@ -8,7 +7,6 @@ name: large
 label: 'Large (480×480)'
 effects:
   ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
-    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
     id: image_scale
     weight: 0
     data:

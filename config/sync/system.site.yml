@@ -1,11 +1,11 @@
-uuid: 0fc92f7a-c2cc-4491-814f-a0e427e1fe42
+uuid: cb958cfe-96a5-4672-bb0a-34c81abb1ebe
 name: 'Tierras y Mas'
 mail: vpolancop@gmail.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/5
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: es

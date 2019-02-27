@@ -75,17 +75,32 @@
     <div class="image">
       {{ content.field_featured_image|field_value }}
     </div>
-    <div class="place-title">
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-      {#<div class="code">{{ content.field_code|field_value }}</div>#}
-    </div>
-    <div class="content">
-      {{ content.body|field_value }}
-    </div>
-    <div class="read-more">
-      <a href="{{ url }}" class="button success">{{ 'Leer Más'|t }}</a>
+    <div class="content-right">
+      <div class="place-title">
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+        <div class="prices">
+          {% if content.field_total_price|field_value %}
+          <div class="price total">
+            <span>Total:</span>
+            {{ content.field_total_price|field_value }}
+          </div>
+          {% endif %}
+          {% if content.field_m2_price|field_value %}
+          <div class="price m2">
+            <span>/</span>
+            {{ content.field_m2_price|field_value }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="content">
+        {{ content.body|field_value }}
+      </div>
+      <div class="read-more">
+        <a href="{{ url }}" class="button success">{{ 'Leer Más'|t }}</a>
+      </div>
     </div>
   </div>
 </article>

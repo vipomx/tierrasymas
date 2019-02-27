@@ -41,6 +41,9 @@
   <div class="filters">
     {{ exposed }}
   </div>
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
   <div class="list">
     {{ rows }}
     {{ empty }}

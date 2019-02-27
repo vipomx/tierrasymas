@@ -9950,20 +9950,14 @@ header.section-header #menu-opener {
 .list-container .list {
   width: 100%;
   margin: 30px auto;
-  max-width: 1380px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1500px;
 }
 @media (max-width: 63.9375em) {
-  /* line 44, ../scss/components/locations/_list.scss */
+  /* line 42, ../scss/components/locations/_list.scss */
   .list-container .filters form {
     padding: 20px;
   }
-  /* line 47, ../scss/components/locations/_list.scss */
+  /* line 45, ../scss/components/locations/_list.scss */
   .list-container .filters {
     border-bottom: solid 3px #008044;
     height: 0;
@@ -9973,14 +9967,14 @@ header.section-header #menu-opener {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
-  /* line 52, ../scss/components/locations/_list.scss */
+  /* line 50, ../scss/components/locations/_list.scss */
   .list-container .filters .form-item,
   .list-container .filters .form-actions {
     width: 49%;
     margin: 0;
     padding: 10px 20px;
   }
-  /* line 59, ../scss/components/locations/_list.scss */
+  /* line 57, ../scss/components/locations/_list.scss */
   .list-container #list-filters {
     color: #fff;
     padding: 5px 50px 5px 15px;
@@ -9990,7 +9984,7 @@ header.section-header #menu-opener {
     border-top-left-radius: 10px;
     position: relative;
   }
-  /* line 67, ../scss/components/locations/_list.scss */
+  /* line 65, ../scss/components/locations/_list.scss */
   .list-container #list-filters:after {
     content: "\f218";
     font-family: 'ionicons';
@@ -10000,17 +9994,17 @@ header.section-header #menu-opener {
     right: 15px;
     top: 5px;
   }
-  /* line 78, ../scss/components/locations/_list.scss */
+  /* line 76, ../scss/components/locations/_list.scss */
   .list-container.open #list-filters:after {
     content: "\f209";
   }
-  /* line 81, ../scss/components/locations/_list.scss */
+  /* line 79, ../scss/components/locations/_list.scss */
   .list-container.open .filters {
     height: auto;
   }
 }
 @media (max-width: 40em) {
-  /* line 88, ../scss/components/locations/_list.scss */
+  /* line 86, ../scss/components/locations/_list.scss */
   .list-container .filters .form-item,
   .list-container .filters .form-actions {
     width: 100%;
@@ -10018,65 +10012,90 @@ header.section-header #menu-opener {
     padding: 10px 20px;
   }
 }
-/* line 96, ../scss/components/locations/_list.scss */
+/* line 94, ../scss/components/locations/_list.scss */
 .list-container .views-row {
-  width: 33%;
+  width: 100%;
   margin-bottom: 30px;
   padding: 10px 20px;
 }
-@media (max-width: 1050px) {
-  /* line 96, ../scss/components/locations/_list.scss */
-  .list-container .views-row {
-    width: 50%;
-  }
-}
 @media (max-width: 800px) {
-  /* line 96, ../scss/components/locations/_list.scss */
+  /* line 94, ../scss/components/locations/_list.scss */
   .list-container .views-row {
     width: 100%;
     border-bottom: solid 2px #f3f3f3;
+    padding: 10px 0;
   }
 }
-/* line 109, ../scss/components/locations/_list.scss */
-.list-container .views-row .place-teaser .image {
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+/* line 104, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser {
+  display: table;
+  width: 100%;
 }
-/* line 112, ../scss/components/locations/_list.scss */
+/* line 107, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .image {
+  float: left;
+  width: 30%;
+}
+@media (max-width: 800px) {
+  /* line 107, ../scss/components/locations/_list.scss */
+  .list-container .views-row .place-teaser .image {
+    width: 100%;
+    float: none;
+  }
+}
+/* line 115, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .image a {
   display: block;
 }
-/* line 114, ../scss/components/locations/_list.scss */
+/* line 117, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .image a img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 120, ../scss/components/locations/_list.scss */
+/* line 123, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .content-right {
+  width: 70%;
+  padding-left: 25px;
+  float: right;
+}
+@media (max-width: 800px) {
+  /* line 123, ../scss/components/locations/_list.scss */
+  .list-container .views-row .place-teaser .content-right {
+    width: 100%;
+    float: none;
+  }
+}
+/* line 131, ../scss/components/locations/_list.scss */
+.list-container .views-row .place-teaser .content-right .prices .price {
+  display: inline-block;
+}
+/* line 135, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title {
   padding: 30px 10px 10px 0px;
   border-bottom: solid 2px #008044;
   margin-bottom: 20px;
 }
-/* line 125, ../scss/components/locations/_list.scss */
+/* line 140, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title h2.node-title {
   font-weight: bold;
   color: #58595b;
   font-size: 1.6875rem;
   text-align: center;
 }
-/* line 130, ../scss/components/locations/_list.scss */
+/* line 145, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title h2.node-title a {
   color: #58595b;
 }
-/* line 134, ../scss/components/locations/_list.scss */
+/* line 149, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .content {
   text-align: justify;
 }
-/* line 137, ../scss/components/locations/_list.scss */
+/* line 152, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .read-more {
-  text-align: center;
+  text-align: right;
 }
-/* line 139, ../scss/components/locations/_list.scss */
+/* line 154, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .read-more .button {
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }

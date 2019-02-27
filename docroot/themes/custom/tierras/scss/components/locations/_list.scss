@@ -36,9 +36,7 @@
   .list{
     width: 100%;
     margin: 30px auto;
-    max-width: 1380px;
-    @include flexbox();
-    flex-wrap: wrap;
+    max-width: 1500px;
   }
   @media (max-width: 63.9375em) {
     .filters form{
@@ -94,20 +92,25 @@
     }
   }
   .views-row{
-    width: 33%;
+    width: 100%;
     margin-bottom: 30px;
     padding: 10px 20px;
-    @media (max-width: 1050px) {
-      width: 50%;
-    }
     @media (max-width: 800px) {
       width: 100%;
       border-bottom: solid 2px #f3f3f3;
+      padding: 10px 0;
     }
   }
   .views-row .place-teaser{
+    display: table;
+    width: 100%;
     .image{
-      box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+      float: left;
+      width: 30%;
+      @media (max-width: 800px) {
+        width: 100%;
+        float: none;
+      }
     }
     .image a{
       display: block;
@@ -115,6 +118,18 @@
         display: block;
         width: 100%;
         height: auto;
+      }
+    }
+    .content-right{
+      width: 70%;
+      padding-left: 25px;
+      float: right;
+      @media (max-width: 800px) {
+        width: 100%;
+        float: none;
+      }
+      .prices .price{
+        display: inline-block;
       }
     }
     .place-title{
@@ -135,7 +150,7 @@
       text-align: justify;
     }
     .read-more{
-      text-align: center;
+      text-align: right;
       .button{
         box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
       }
