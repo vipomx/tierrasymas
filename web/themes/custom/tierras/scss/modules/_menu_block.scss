@@ -10,8 +10,73 @@
     padding: 0 15px;
     margin: 0 5px 0 10px;
     border-left: solid 1px #fff; 
+    position: relative;
     a{
       color: #fff;
+    }
+    
+    &.has-flyout{
+      position: relative;
+      .flyout-toggle{
+        display: none;
+      }
+      ul.flyout{
+        li{
+          margin: 5px 0;
+          width: 100%;
+          text-align: left;
+          a{
+            padding: 10px 5px;
+            display: inline-block;
+          }
+        }
+      }
+      @include transition(all 0.5s);
+      @media (max-width: 63.9375em) {
+        .flyout-toggle{
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 3;
+          background: url(../images/arrow-mobile-menu.png) no-repeat center center;
+          background-size: 100%;
+        }
+        &.open{
+          ul.flyout{
+            display: block;
+          }
+          .flyout-toggle{
+            @include transform(rotate(180deg));
+          }
+        }
+      }
+    }
+    &.has-flyout ul.flyout{
+      background: #008044;
+      position: absolute;
+      padding: 40px 15px 20px;
+      z-index: 30;
+      width: 200%;
+      right: -22px;
+      display: none;
+      @media (max-width: 63.9375em) {
+        position: relative;
+        width: 100%;
+        right: 0;
+        background: rgba(0,128,68,0.5);
+        li{
+          border-bottom: none;
+        }
+      }
+    }
+    
+    @media (min-width: 63.9375em) {
+      &.has-flyout:hover  ul.flyout{
+        display: block;
+      }
     }
   }
   @media (max-width: 63.9375em) {

@@ -8,6 +8,9 @@
     mobileMenu();
     mapFilters();
   }
+  $('a.no-link').click(function(event) {
+      event.preventDefault();
+    });
 
   // Manages mobile menu.
   function mobileMenu() {
@@ -22,6 +25,18 @@
           $('#block-tierras-main-menu').addClass('open');
           $('#menu-opener').addClass('to-close');
         }
+      }
+    });
+    $('a.flyout-toggle').click(function(event) {
+      event.preventDefault();
+      var parent = $(this).parent('li.has-flyout');
+      if (parent.hasClass('open')) {
+        parent.find('ul.flyout').slideUp();
+        parent.removeClass('open');
+      }
+      else {
+        parent.find('ul.flyout').slideDown();
+        parent.addClass('open');
       }
     });
   }
