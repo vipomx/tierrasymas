@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<div{{ attributes }}>
+  {%
+    include '@tierras/promoter/promoter.twig' with {
+      image: content.user_picture|field_value,
+      name: content.field_name|field_value,
+      description: content.field_descripcion|field_value,
+      phone: content.field_phone|field_value,
+      fb: content.field_fb|field_value,
+      mail: content.field_mail|field_value
+    } only
+  %}
+</div>

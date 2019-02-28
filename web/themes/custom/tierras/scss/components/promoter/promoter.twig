@@ -1,0 +1,50 @@
+<div class="promoter-card-wrapper">
+  <div class="promoter-card">
+    <h4>{{ "Contacta al promotor para mas informacion"|t }}</h4>
+    {% if image %}
+      <div class="image">
+        {{ image }}
+      </div>
+    {% endif %}
+    <div class="card-content{% if image %} with-image{% endif %}">
+      {% if name or description %}
+      <div class="info basic">
+        {% if name %}
+          <h2 class="name">
+            {{ name }}
+          </h2>
+        {% endif %}
+        {% if description %}
+          <div class="description">
+            {{ description }}
+          </div>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if mail or fb or phone %}
+        <div class="info links">
+          <ul class="links-list">
+            {% if phone %}
+              <li class="contact-link phone">
+                <a href="tel:{{ phone }}">Phone</a>
+              </li>
+              <li class="contact-link whats">
+                <a href="https://wa.me/5201{{ phone }}?text=Estoy interesado en una propiedad">Whatsapp</a>
+              </li>
+            {% endif %}
+            {% if fb %}
+              <li class="contact-link fb">
+                <a href="{{ fb }}">Facebook</a>
+              </li>
+            {% endif %}
+            {% if mail %}
+              <li class="contact-link mail">
+                <a href="mailto:{{ mail }}">Mail</a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

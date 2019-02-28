@@ -77,85 +77,61 @@
       {{ label }}
     </h1>
   </div>
-  {% if content.field_gallery|field_value is empty %}
-    <div class="place-info">
-      <div class="place-data">
-        {%
-          include '@tierras/sharethis/sharethis.twig' with {
-            site_url: page_url|url_encode 
-          } only
-        %}
-        <div class="code">
-          {{ content.field_code }}
-        </div>
-        <div class="price">
-          <div class="m2-price">
-            {{ content.field_m2_price }}
-          </div>
-          <div class="total-price">
-            {{ content.field_total_price }}
-          </div>
-        </div>
-        <div class="place-type">
-          {{ content.field_typo_de_terreno }}
-        </div>
-        <div class="op-type">
-          {{ content.field_operacion }}
-        </div>
+  <div class="place-first-info">
+    <div class="prices">
+      {% if content.field_total_price|field_value %}
+      <div class="price total">
+        <span>Total:</span>
+        {{ content.field_total_price|field_value }}
       </div>
-      <div class="place-description">
-        {{ content.body }}
+      {% endif %}
+      {% if content.field_m2_price|field_value %}
+      <div class="price m2">
+        <span>/</span>
+        {{ content.field_m2_price|field_value }}
+      </div>
+      {% endif %}
+    </div>
+    <div class="share-wrapper">
+      {%
+        include '@tierras/sharethis/sharethis.twig' with {
+          site_url: page_url|url_encode 
+        } only
+      %}
+    </div>
+  </div>
+  <div class="images-wrapper">
+    {% if content.field_featured_image %}
+      <div class="feature-image">
+        {{ content.field_featured_image }}
+      </div>
+    {% endif %}
+    {% if content.field_gallery %}
+      <div class="gallery-wrapper">
+        {% for item in content.field_gallery|field_value %}
+          <div class="gallery-item">
+            {{ item }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="place-info">
+    <div class="place-data">
+      <div class="code">
+        {{ content.field_code }}
+      </div>
+      <div class="place-type">
+        {{ content.field_typo_de_terreno }}
+      </div>
+      <div class="op-type">
+        {{ content.field_operacion }}
       </div>
     </div>
-    
-  {% else %}
-    <div class="row expanded">
-      <div class="large-6 columns">
-        <div class="gallery">
-          {%
-            include '@tierras/carousel/carousel.twig' with {
-              items: content.field_gallery|field_value,
-            } only
-          %}
-        </div>
-      </div>
-      <div class="large-6 columns">
-        {%
-          include '@tierras/sharethis/sharethis.twig' with {
-            site_url: page_url|url_encode 
-          } only
-        %}
-        <div class="place-info">
-          <div class="place-data">
-            <div class="code">
-              {{ content.field_code }}
-            </div>
-            <div class="price">
-              <div class="m2-price">
-                {{ content.field_m2_price }}
-              </div>
-              <div class="total-price">
-                {{ content.field_total_price }}
-              </div>
-            </div>
-            <div class="place-type">
-              {{ content.field_typo_de_terreno }}
-            </div>
-            <div class="op-type">
-              {{ content.field_operacion }}
-            </div>
-            <div class="docs">
-              {{ content.field_documentos|field_value }}
-            </div>
-          </div>
-          <div class="place-description">
-            {{ content.body }}
-          </div>
-        </div>
-      </div>
+    <div class="place-description">
+      {{ content.body }}
     </div>
-    
-  {% endif %}
+  </div>
   
   <div class="extra-info">
     <div class="map">
@@ -163,4 +139,18 @@
     </div>
   </div>
 
+  {% if content.field_video %}
+  <div class="video-wrapper">
+    {{ content.field_video }}
+  </div>
+  {% endif %}
+
 </article>
+
+{% if content.field_promotor|field_value %}
+  <div class="promotor-card-wrapper">
+    <div class="promotor-card">
+      {{ content.field_promotor|field_value }}
+    </div>
+  </div>
+{% endif %}

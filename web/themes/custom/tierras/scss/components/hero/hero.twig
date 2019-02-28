@@ -9,9 +9,16 @@
         {% endfor %}
       </div>
     {% else %}
+      {% if image %}
       <div class="image">
         {{ images }}
       </div>
+      {% else %}
+      <div class="image">
+        <img src="/themes/custom/tierras/images/hero-default.jpeg" alt="Campo hierba">
+      </div>
+      {% endif %}
+      
     {% endif %}
   </div>
   {% if (title or content or cta) %}

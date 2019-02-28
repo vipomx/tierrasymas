@@ -9,7 +9,7 @@
     $('.paragraph--type--places-carousel .places-carousel').owlCarousel({
       loop:false,
       margin:80,
-      items:3,
+      items:4,
       nav: true,
       dots: false,
       responsive:{
