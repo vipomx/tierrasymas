@@ -8,6 +8,11 @@ web/themes/custom/*/.sass-cache
 /web/sites/*/settings.dev.php
 /web/sites/*/settings.prod.php
 
+# Ignore composer files
+/vendor/
+/web/core
+/web/modules/contrib
+
 # Ignore Drupal's file directory
 /web/sites/*/files/
 
