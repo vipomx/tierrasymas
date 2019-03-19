@@ -9,7 +9,7 @@ web/themes/custom/*/.sass-cache
 /web/sites/*/settings.prod.php
 
 # Ignore composer files
-/vendor/
+/vendor
 /web/core
 /web/modules/contrib
 
