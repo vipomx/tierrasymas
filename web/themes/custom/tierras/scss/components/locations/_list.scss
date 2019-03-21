@@ -110,6 +110,14 @@
       @media (max-width: 800px) {
         width: 100%;
         float: none;
+        position: relative;
+        overflow: hidden;
+        height: 160px;
+        img{
+          position: absolute;
+          top: 50%;
+          @include transform(translateY(-50%));
+        }
       }
     }
     .image a{

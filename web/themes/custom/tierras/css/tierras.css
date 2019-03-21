@@ -10119,62 +10119,74 @@ header.section-header #menu-opener {
   .list-container .views-row .place-teaser .image {
     width: 100%;
     float: none;
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+  }
+  /* line 116, ../scss/components/locations/_list.scss */
+  .list-container .views-row .place-teaser .image img {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
-/* line 115, ../scss/components/locations/_list.scss */
+/* line 123, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .image a {
   display: block;
 }
-/* line 117, ../scss/components/locations/_list.scss */
+/* line 125, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .image a img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* line 123, ../scss/components/locations/_list.scss */
+/* line 131, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .content-right {
   width: 70%;
   padding-left: 25px;
   float: right;
 }
 @media (max-width: 800px) {
-  /* line 123, ../scss/components/locations/_list.scss */
+  /* line 131, ../scss/components/locations/_list.scss */
   .list-container .views-row .place-teaser .content-right {
     width: 100%;
     float: none;
     padding-left: 0;
   }
 }
-/* line 132, ../scss/components/locations/_list.scss */
+/* line 140, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .content-right .prices .price {
   display: inline-block;
 }
-/* line 136, ../scss/components/locations/_list.scss */
+/* line 144, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title {
   padding: 30px 10px 10px 0px;
   border-bottom: solid 2px #008044;
   margin-bottom: 20px;
 }
-/* line 141, ../scss/components/locations/_list.scss */
+/* line 149, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title h2.node-title {
   font-weight: bold;
   color: #58595b;
   font-size: 1.6875rem;
   text-align: center;
 }
-/* line 146, ../scss/components/locations/_list.scss */
+/* line 154, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .place-title h2.node-title a {
   color: #58595b;
 }
-/* line 150, ../scss/components/locations/_list.scss */
+/* line 158, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .content {
   text-align: justify;
 }
-/* line 153, ../scss/components/locations/_list.scss */
+/* line 161, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .read-more {
   text-align: right;
 }
-/* line 155, ../scss/components/locations/_list.scss */
+/* line 163, ../scss/components/locations/_list.scss */
 .list-container .views-row .place-teaser .read-more .button {
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
@@ -10628,7 +10640,7 @@ header.section-header #menu-opener {
 
 /* line 23, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel {
-  padding: 50px 90px;
+  padding: 50px 65px;
   background: #008044;
 }
 /* line 26, ../scss/paragraphs/_paragraphs.scss */
@@ -10664,7 +10676,16 @@ header.section-header #menu-opener {
   background: #fff;
   color: #008044;
 }
-/* line 59, ../scss/paragraphs/_paragraphs.scss */
+/* line 58, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .prices {
+  margin-bottom: 30px;
+}
+/* line 61, ../scss/paragraphs/_paragraphs.scss */
+.paragraph--type--places-carousel .place-item .prices .price {
+  display: inline-block;
+  color: #fff;
+}
+/* line 66, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav {
   position: absolute;
   top: 50%;
@@ -10677,24 +10698,24 @@ header.section-header #menu-opener {
   transform: translateY(-50%);
 }
 @media (max-width: 700px) {
-  /* line 59, ../scss/paragraphs/_paragraphs.scss */
+  /* line 66, ../scss/paragraphs/_paragraphs.scss */
   .paragraph--type--places-carousel .owl-nav {
     left: -70px;
     right: -70px;
   }
 }
-/* line 70, ../scss/paragraphs/_paragraphs.scss */
+/* line 77, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button {
   width: 50px;
   height: 70px;
   margin: 0;
   position: relative;
 }
-/* line 75, ../scss/paragraphs/_paragraphs.scss */
+/* line 82, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button span {
   display: none;
 }
-/* line 78, ../scss/paragraphs/_paragraphs.scss */
+/* line 85, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button:after {
   content: '\f363';
   font-family: 'ionicons';
@@ -10710,19 +10731,19 @@ header.section-header #menu-opener {
   font-size: 60px;
   line-height: 60px;
 }
-/* line 93, ../scss/paragraphs/_paragraphs.scss */
+/* line 100, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button.owl-prev {
   float: left;
 }
-/* line 96, ../scss/paragraphs/_paragraphs.scss */
+/* line 103, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button.owl-next {
   float: right;
 }
-/* line 99, ../scss/paragraphs/_paragraphs.scss */
+/* line 106, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button.owl-prev:after {
   content: '\f361';
 }
-/* line 102, ../scss/paragraphs/_paragraphs.scss */
+/* line 109, ../scss/paragraphs/_paragraphs.scss */
 .paragraph--type--places-carousel .owl-nav button:focus, .paragraph--type--places-carousel .owl-nav button:hover, .paragraph--type--places-carousel .owl-nav button:active {
   outline: none;
 }
