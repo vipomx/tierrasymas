@@ -5,20 +5,23 @@
  */
 (function ($, Drupal) {
   if ($('.paragraph--type--places-carousel').length > 0) {
-    console.log('here');
     $('.paragraph--type--places-carousel .places-carousel').owlCarousel({
-      loop:false,
+      loop:true,
       margin:80,
       items:4,
       nav: true,
       dots: false,
+      stagePadding: 0,
       responsive:{
-        500:{
+        0:{
           items:1,
-          margin:30
+          margin:10
         },
         900:{
           items:2
+        },
+        1200:{
+          items:4
         },
       }
     })

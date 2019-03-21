@@ -21,7 +21,7 @@
   }
 }
 .paragraph--type--places-carousel{
-  padding: 50px 90px;
+  padding: 50px 65px;
   background: #008044;
   .inner-wrapper{
     width: 100%;
@@ -54,6 +54,13 @@
         background: #fff;
         color: #008044;
       }
+    }
+    .prices{
+      margin-bottom: 30px;
+    }
+    .prices .price{
+      display: inline-block;
+      color: #fff;
     }
   }
   .owl-nav{
